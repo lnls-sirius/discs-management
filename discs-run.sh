@@ -63,7 +63,11 @@ function backup_databases {
         docker run --rm --volumes-from ccdb-postgres -v $(pwd)/backup-discs:/backup lnls/docker-ccdb-postgres tar czf /backup/backup-ccdb-postgres-$(date "+%Y%m%d").gz /var/lib/postgresql/data
     else
         printf "service ccdb-postgres not running\n"
-    fi    
+    fi  
+
+    # lastfiles=$(ls -t $(pwd)/backup-dics/ | head -3)
+    # incomplete!
+      
 }
 
 if [ -z ${CMD} ]; then 

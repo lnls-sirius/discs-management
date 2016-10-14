@@ -1,5 +1,7 @@
 *~
 
+repos-discs/
+
 */*2*.gz
 
 # Byte-compiled / optimized / DLL files
