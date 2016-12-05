@@ -2,7 +2,7 @@ RBAC
 ====
 
   access
-  ------ 
+  ------
   https://10.0.7.55:8445/
 
 
@@ -10,7 +10,7 @@ NAMING SERVICE
 ==============
 
   access
-  ------ 
+  ------
   http://10.0.7.55:8080/names/
 
   discs_names dump
@@ -37,27 +37,27 @@ Abbreviation Tables
 
 Device Names
 
-3PW     3-Pole Wiggler 
-Anode   anode
-B       electron beam
+3PW     3-Pole Wiggler
+Anode   Anode
+B       Electron beam
 BAKJ    bakeout heating jackets
 Bend    Dipole (magnet)
 BLW     non-rf bellows
 BLWR    rf shielded bellows
 BMPS    Bending Magnet Photon Shutter
 BPM     Beam Position Monitor
-CCG     cold cathode vacuum gauge
-Cor     Corrector magnet
+CCG     Old cathode vacuum gauge
 CRL     Compound Refractive Lens
 Dig     Digitizer
 Door    Door
-DW      Damping Wiggler 
+DW      Damping Wiggler
 EPU     Elliptically Polarizing Undulator
 FOFB    Fast Orbit Feedback
 EGun    Electron gun
 GV      gate valve (may be used for FE and
-HCor    Horizontal Corrector Magnet
-HFCor   Horizontal Fast Corrector Magnet
+H       Horizontal...
+CH      Horizontal corrector magnet
+CHF     Fast horizontal corrector magnet
 IOC     EPICS IOC
 IP      sputter ion pump
 IPC     ion pump controller
@@ -71,12 +71,13 @@ NEGC    NEG pump controller
 NSW     Network Switch
 Panel   HMI Panel
 PLC     Programmable Logic Controller
-PRV     pressure relief valve
+PRV     Pressure relief valve
 PS      Power supply
 QD      Defocusing Quadrupole
-QF      Focusing Quadrupole    
+QF      Focusing Quadrupole
 RGA     residual gas analyzer / partial
 Scan    Scan (for experiment control)
+Scrap   Scrapper
 Solnd   Solenoid
 SQuad   Skew quadrupole
 Sext    Sextupole magnet
@@ -86,9 +87,10 @@ TMP     turbomolecular pump and
 TSP     titanium sublimation pump
 TSPC    titanium sublimation pump
 TSrv    Terminal server
-VCor    Vertical Corrector Magnet
+V       Vertical...
+CV      Vertical corrector magnet
+CVF     Fast Vertical corrector magnet
 VF      Visual Flag
-VFCor   Vertical Fast Corrector Magnet
 VFD     Variable Frequency Drive
 VGC     vacuum gauge controller
 
@@ -202,8 +204,10 @@ Strth   Strength
 Tn      Thin
 Tk      Thick
 
+Tactic rules:
 
-postgres 
+- Devices should use H/V for Horizontal/Vertical prefix (HCor), while signals should use X/Y
+postgres
 ========
 
 - psql --username postgres
@@ -226,7 +230,7 @@ http://10.0.7.55:8083/rest/deviceTypes/RFLLAmpLC
 http://10.0.7.55:8083/rest/slots
 http://10.0.7.55:8083/rest/slots/SI-02C1:PS-Q1
 
-http://server/ccdb/rest/slot/<slotName>/download/<fileName> 
+http://server/ccdb/rest/slot/<slotName>/download/<fileName>
 http://10.0.7.55:8083/rest/slots?deviceType=QuadrupolePS
 http://10.0.7.55:8083/rest/slotNames
 http://10.0.7.55:8083/rest/slotNames?deviceType=QuadrupolePS
@@ -240,4 +244,3 @@ How to backup DISCS databases
 02. cd /home/fac_files/discs-management
 03. ./discs-run.sh backup
 04. scp -rp  backup-discs/*$(date "+%Y%m%d").gz fernando-linux:/home/fac_files/backup-discs/
-
