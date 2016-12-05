@@ -37,8 +37,9 @@ Abbreviation Tables
 
 Device Names
 
-3PW     3-Pole Wiggler
-Anode   Anode
+3PW     3-Pole Wiggler 
+Anode   anode
+AcStr   Accelerator Structure
 B       Electron beam
 BAKJ    bakeout heating jackets
 Bend    Dipole (magnet)
