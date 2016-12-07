@@ -78,6 +78,7 @@ QD      Defocusing Quadrupole
 QF      Focusing Quadrupole    
 RGA     residual gas analyzer / partial
 Scan    Scan (for experiment control)
+Scrn    Screen
 Solnd   Solenoid
 SQuad   Skew quadrupole
 Sext    Sextupole magnet
