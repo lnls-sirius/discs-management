@@ -5,6 +5,8 @@ TODO list
 - include cables service in backup script
 - adapt DISCS services to run as linux services
 - allow access to DISCS service from outside the domain (who will host it?)
+- add info in sirius wiki on how to consume data using the REST interface.
+
 
 
 RBAC
