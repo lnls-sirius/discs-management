@@ -1,7 +1,8 @@
 TODO list
 =========
 
-- recompile services with links in their web interfaces to sirius wiki pages where signal/device tables can be edited.
+- refactor services with links in their web interfaces to sirius wiki pages where signal/device tables can be edited.
+- refactor services with text adapted to LNLS (excel template files, for exmaple)
 - include cables service in backup script
 - adapt DISCS services to run as linux services
 - allow access to DISCS service from outside the domain (who will host it?)
