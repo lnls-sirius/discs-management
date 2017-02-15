@@ -1,13 +1,7 @@
 TODO list
 =========
 
-- refactor services with links in their web interfaces to sirius wiki pages where signal/device tables can be edited.
-- refactor services with text adapted to LNLS (excel template files, support team link at NS, for example)
-- include cables service in backup script
-- adapt DISCS services to run as linux services
-- allow access to DISCS service from outside the domain (who will host it?)
-- add info in sirius wiki on how to consume data using the REST interface.
-
+- Issues in GitHub repo!
 
 
 RBAC
