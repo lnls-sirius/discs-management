@@ -35,7 +35,7 @@ CCDB
 
 access: http://10.0.7.55:8083/
 
-a site for abbriviation suggestions:
+a site for abbreviation suggestions:
 
 http://www.abbreviations.com/abbreviation/sample
 
