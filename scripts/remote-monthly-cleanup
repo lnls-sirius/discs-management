@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BKUP_PATH=/home/fac_files/backup-dics/monthly
+BKUP_PATH=/home/fac_files/backup-discs/monthly
 
 if [ -d  $BKUP_PATH ]; then
     cd $BKUP_PATH
