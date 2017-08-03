@@ -13,9 +13,9 @@ function clone_repos {
 }
 
 function clone_compose_repos {
-    git clone ${GITHUBURL}/docker-rbac-compose
-    git clone ${GITHUBURL}/docker-naming-service-compose
-    git clone ${GITHUBURL}/docker-ccdb-compose
+    git clone ${GITHUBURL}/docker-rbac-composed
+    git clone ${GITHUBURL}/docker-naming-service-composed
+    git clone ${GITHUBURL}/docker-ccdb-composed
 }
 
 function print_help {
