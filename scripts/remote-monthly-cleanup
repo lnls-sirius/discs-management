@@ -6,5 +6,3 @@ if [ -d  $BKUP_PATH ]; then
     cd $BKUP_PATH
     find ./ -mtime +365 -type f -delete
 fi
-
-

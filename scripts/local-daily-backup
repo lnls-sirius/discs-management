@@ -7,7 +7,5 @@ if [ -d  $DISCS_PATH ]; then
     cd $DISCS_PATH
     ./discs-run.sh backup
     find ./backup-discs -mtime +30 -type f -delete
-    scp -rp  backup-discs/*$(date "+%Y%m%d").gz $REMOTE_PATH
+    scp -rp  backup-discs/*$(date "+%Y-%m-%d")*.gz $REMOTE_PATH
 fi
-
-

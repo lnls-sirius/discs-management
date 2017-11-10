@@ -40,11 +40,10 @@ function print_help {
 
 function backup_databases {
     mkdir -p backup-discs
-
     RUNNING=$(docker ps | grep rbac-auth-services-postgres)
     if [ ! -z "${RUNNING}" ]; then
 	      printf "backing rbac-auth-services-postgres up ...\n"
-        fname=dump_rbac-postgres`date +%d-%m-%Y"_"%H_%M_%S`.sql.gz
+        fname=./backup-discs/dump_rbac-postgres_`date +%Y-%m-%d"_"%H-%M-%S`.sql.gz
         docker exec -t rbac-auth-services-postgres pg_dumpall -c -U rbac | gzip -9 > $fname
     else
         printf "service rbac-auth-services-postgres not running\n"
@@ -53,7 +52,7 @@ function backup_databases {
     RUNNING=$(docker ps | grep naming-service-postgres)
     if [ ! -z "${RUNNING}" ]; then
 	      printf "backing naming-service-postgres up ...\n"
-        fname=dump_naming-service-postgres`date +%d-%m-%Y"_"%H_%M_%S`.sql.gz
+        fname=./backup-discs/dump_naming-service-postgres_`date +%Y-%m-%d"_"%H-%M-%S`.sql.gz
         docker exec -t naming-service-postgres pg_dumpall -c -U discs_names | gzip -9 > $fname
     else
         printf "service naming-service-postgres not running\n"
@@ -62,7 +61,7 @@ function backup_databases {
     RUNNING=$(docker ps | grep ccdb-postgres)
     if [ ! -z "${RUNNING}" ]; then
 	      printf "backing ccdb-postgres up ...\n"
-        fname=dump_ccdb-postgres`date +%d-%m-%Y"_"%H_%M_%S`.sql.gz
+        fname=./backup-discs/dump_ccdb-postgres_`date +%Y-%m-%d"_"%H-%M-%S`.sql.gz
         docker exec -t ccdb-postgres pg_dumpall -c -U ccdb | gzip -9 > $fname
     else
         printf "service ccdb-postgres not running\n"
@@ -71,7 +70,7 @@ function backup_databases {
     RUNNING=$(docker ps | grep cables-postgres)
     if [ ! -z "${RUNNING}" ]; then
 	      printf "backing cables-postgres up ...\n"
-        fname=dump_cables-postgres`date +%d-%m-%Y"_"%H_%M_%S`.sql.gz
+        fname=./backup-discs/dump_cables-postgres_`date +%Y-%m-%d"_"%H-%M-%S`.sql.gz
         docker exec -t cables-postgres pg_dumpall -c -U cabledb | gzip -9 > $fname
     else
         printf "service cables-postgres not running\n"
