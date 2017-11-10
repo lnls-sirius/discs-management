@@ -76,4 +76,4 @@ How to backup DISCS databases
 01. ssh linux82-linux
 02. cd /home/fac_files/discs-management
 03. ./discs-run.sh backup
-04. scp -rp  backup-discs/*$(date "+%Y%m%d").gz fernando-linux:/home/fac_files/backup-discs/
+04. scp -rp  backup-files/*$(date "+%Y%m%d").gz fernando-linux:/home/fac_files/backup-files/

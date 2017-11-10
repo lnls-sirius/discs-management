@@ -6,5 +6,5 @@ REMOTE_PATH=fernando-linux:/home/fac_files/backup-discs/monthly/
 if [ -d  $DISCS_PATH ]; then
     cd $DISCS_PATH
     ./discs-run.sh backup
-    scp -rp  backup-discs/*$(date "+%Y-%m-%d")*.gz $REMOTE_PATH
+    scp -rp  backup-files/*$(date "+%Y-%m-%d")*.gz $REMOTE_PATH
 fi
