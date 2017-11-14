@@ -4,7 +4,7 @@
 
 repos-discs/
 
-*/*2*.gz
+*/*20*.gz
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
