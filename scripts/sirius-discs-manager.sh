@@ -39,11 +39,11 @@ function print_help {
 }
 
 function backup_databases {
-    mkdir -p backup-files
+    mkdir -p $ROOT_GROUP/backups/discs
     RUNNING=$(docker ps | grep rbac-auth-services-postgres)
     if [ ! -z "${RUNNING}" ]; then
 	      printf "backing rbac-auth-services-postgres up ...\n"
-        fname=./backup-files/dump_rbac-postgres_`date +%Y-%m-%d"_"%H-%M-%S`.sql.gz
+        fname=$ROOT_GROUP/backups/discs/dump_rbac-postgres_`date +%Y-%m-%d"_"%H-%M-%S`.sql.gz
         docker exec -t rbac-auth-services-postgres pg_dumpall -c -U rbac | gzip -9 > $fname
     else
         printf "service rbac-auth-services-postgres not running\n"
@@ -52,7 +52,7 @@ function backup_databases {
     RUNNING=$(docker ps | grep naming-service-postgres)
     if [ ! -z "${RUNNING}" ]; then
 	      printf "backing naming-service-postgres up ...\n"
-        fname=./backup-files/dump_naming-service-postgres_`date +%Y-%m-%d"_"%H-%M-%S`.sql.gz
+        fname=$ROOT_GROUP/backups/discs/dump_naming-service-postgres_`date +%Y-%m-%d"_"%H-%M-%S`.sql.gz
         docker exec -t naming-service-postgres pg_dumpall -c -U discs_names | gzip -9 > $fname
     else
         printf "service naming-service-postgres not running\n"
@@ -61,7 +61,7 @@ function backup_databases {
     RUNNING=$(docker ps | grep ccdb-postgres)
     if [ ! -z "${RUNNING}" ]; then
 	      printf "backing ccdb-postgres up ...\n"
-        fname=./backup-files/dump_ccdb-postgres_`date +%Y-%m-%d"_"%H-%M-%S`.sql.gz
+        fname=$ROOT_GROUP/backups/discs/dump_ccdb-postgres_`date +%Y-%m-%d"_"%H-%M-%S`.sql.gz
         docker exec -t ccdb-postgres pg_dumpall -c -U ccdb | gzip -9 > $fname
     else
         printf "service ccdb-postgres not running\n"
@@ -70,7 +70,7 @@ function backup_databases {
     RUNNING=$(docker ps | grep cables-postgres)
     if [ ! -z "${RUNNING}" ]; then
 	      printf "backing cables-postgres up ...\n"
-        fname=./backup-files/dump_cables-postgres_`date +%Y-%m-%d"_"%H-%M-%S`.sql.gz
+        fname=$ROOT_GROUP/backups/discs/dump_cables-postgres_`date +%Y-%m-%d"_"%H-%M-%S`.sql.gz
         docker exec -t cables-postgres pg_dumpall -c -U cabledb | gzip -9 > $fname
     else
         printf "service cables-postgres not running\n"
