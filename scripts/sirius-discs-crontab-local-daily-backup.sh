@@ -4,7 +4,7 @@ source ~/.bashrc
 export PATH=/usr/local/bin:$PATH
 
 DISCS_PATH=$ROOT_GROUP/backups/discs
-REMOTE_PATH=fernando-linux:/home/fac_files/backups/discs/daily/
+REMOTE_PATH=fernando-linux:$ROOT_GROUP/backups/discs/daily/
 
 if [ -d  $DISCS_PATH ]; then
     cd $DISCS_PATH
