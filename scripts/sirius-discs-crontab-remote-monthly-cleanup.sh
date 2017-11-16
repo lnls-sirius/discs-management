@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source ~/.bashrc
+export PATH=/usr/local/bin:$PATH
 
 BKUP_PATH=$ROOT_GROUP/backups/discs/monthly
 

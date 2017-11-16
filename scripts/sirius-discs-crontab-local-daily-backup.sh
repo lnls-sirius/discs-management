@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source ~/.bashrc
+export PATH=/usr/local/bin:$PATH
 
 DISCS_PATH=$ROOT_GROUP/backups/discs
 REMOTE_PATH=fernando-linux:/home/fac_files/backups/discs/daily/
